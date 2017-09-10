@@ -9,7 +9,15 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloAppEngine</servlet-name>
-    <url-pattern>/hello</url-pattern>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminAppEngine</servlet-name>
+    <servlet-class>AdminAppEngine</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminAppEngine</servlet-name>
+    <url-pattern>/admin</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>HelloAppEngine</welcome-file>

@@ -7,8 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link type="text/css" rel="stylesheet" href="top.css">
-<title>Top stats</title>
+<link type="text/css" rel="stylesheet" href="vsop.css">
+<title>VSOP For Ever</title>
 
 <link rel="stylesheet"
 	href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -25,16 +25,11 @@
 			"sDom" : 't<"text-center"p>',
 			"bFilter": false,
 			"bLengthChange" : false,
-			"iDisplayLength" : 60,
+			"iDisplayLength" : 200,
 			"aaSorting" : [ [ 1, "desc" ] ],
 			"aoColumns" : [ 
 			null, /* Date */
 			null, /* Type */
-			null, /* eu */
-			null, /* us */
-			null, /* kr */
-			null, /* tw */
-			{"bSearchable" : false,"bVisible" : false},/* last */
 			]
 		});
 	});
@@ -77,17 +72,16 @@
 		<div id="tabs-1">
 			<div >
 
-				<table id="s0" class="display dataTable"
-					align="center">
+				<table id="s0" class="display dataTable" align="center">
 					<thead>
 						<TR>
 							<TH>Name / FirstName</TH>
 							<TH>Rank</TH>
+						</TR>
 					</thead>
 					<c:forEach var="player" items="${players}">
 						<TR class="gradeX">
-							<TD class="center">${player.name}</TD>
-							<TD class="center">${player.firstName}</TD>
+							<TD class="center">${player.name} / ${player.firstName}</TD>
 							<TD class="center">${player.rank.name}</TD>
 						</TR>
 					</c:forEach>
